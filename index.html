@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KMRL Document Intelligence — Dashboard</title>
+  <meta name="description" content="Kochi Metro Rail Limited's AI-powered document intelligence platform — search, extract, and act on contracts, tenders, invoices, and reports." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+    <div class="sidebar-brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="13" stroke="#B8873D" stroke-width="1.5"/>
+          <path d="M7 14h14M14 7v14" stroke="#B8873D" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="14" cy="14" r="3" fill="#B8873D"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">KMRL</span>
+        <span class="brand-sub">Document Intelligence</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">Workspace</span>
+      <ul class="nav-list" role="list">
+        <li><a href="index.html" class="nav-item active" aria-current="page">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+          Dashboard
+        </a></li>
+        <li><a href="library.html" class="nav-item">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M3 4h14M3 8h14M3 12h9M3 16h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Document Library
+        </a></li>
+        <li><a href="chat.html" class="nav-item">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M17 10c0 3.866-3.134 7-7 7a7.003 7.003 0 01-6.072-3.5L3 17l3.5-.928A7 7 0 1117 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          AI Assistant
+          <span class="nav-badge">RAG</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">Documents</span>
+      <ul class="nav-list" role="list">
+        <li><a href="#" class="nav-item">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M4 4v12a2 2 0 002 2h8a2 2 0 002-2V7l-4-3H6a2 2 0 00-2 0z" stroke="currentColor" stroke-width="1.5"/><path d="M12 4v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Contracts
+          <span class="nav-count">142</span>
+        </a></li>
+        <li><a href="#" class="nav-item">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M4 4v12a2 2 0 002 2h8a2 2 0 002-2V7l-4-3H6a2 2 0 00-2 0z" stroke="currentColor" stroke-width="1.5"/><path d="M12 4v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Tenders
+          <span class="nav-count">89</span>
+        </a></li>
+        <li><a href="#" class="nav-item">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M4 4v12a2 2 0 002 2h8a2 2 0 002-2V7l-4-3H6a2 2 0 00-2 0z" stroke="currentColor" stroke-width="1.5"/><path d="M12 4v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Invoices
+          <span class="nav-count">374</span>
+        </a></li>
+        <li><a href="#" class="nav-item">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M4 4v12a2 2 0 002 2h8a2 2 0 002-2V7l-4-3H6a2 2 0 00-2 0z" stroke="currentColor" stroke-width="1.5"/><path d="M12 4v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Reports
+          <span class="nav-count">56</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-bottom">
+      <button class="upload-btn" id="uploadBtn" aria-label="Upload new document">
+        <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M10 3v10M6 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Upload Document
+      </button>
+      <div class="sidebar-user">
+        <div class="user-avatar" aria-hidden="true">SR</div>
+        <div class="user-info">
+          <span class="user-name">Suresh Rajan</span>
+          <span class="user-role">Admin</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content" id="main-content">
+    <!-- Top Bar -->
+    <header class="topbar" role="banner">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar">
+          <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="page-title-area">
+          <h1 class="page-title">Dashboard</h1>
+          <time class="page-date" datetime="2026-08-21">21 August 2026</time>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-bar" role="search">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M13 13l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <input type="search" placeholder="Search documents, clauses, amounts…" class="search-input" id="globalSearch" aria-label="Global document search" />
+          <kbd class="search-kbd">⌘K</kbd>
+        </div>
+        <button class="icon-btn" aria-label="Notifications (3 unread)">
+          <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><path d="M10 2a6 6 0 016 6v3l1 2H3l1-2V8a6 6 0 016-6z" stroke="currentColor" stroke-width="1.5"/><path d="M8 16a2 2 0 004 0" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span class="notif-dot" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Dashboard Body -->
+    <div class="dashboard-body">
+
+      <!-- KPI Strip -->
+      <section class="kpi-strip" aria-label="Key metrics">
+        <div class="kpi-item">
+          <span class="kpi-value" data-target="661">0</span>
+          <span class="kpi-label">Total Documents</span>
+        </div>
+        <div class="kpi-divider" aria-hidden="true"></div>
+        <div class="kpi-item">
+          <span class="kpi-value" data-target="24">0</span>
+          <span class="kpi-label">In Pipeline</span>
+        </div>
+        <div class="kpi-divider" aria-hidden="true"></div>
+        <div class="kpi-item">
+          <span class="kpi-value amber" data-target="17">0</span>
+          <span class="kpi-label">Needs Review</span>
+        </div>
+        <div class="kpi-divider" aria-hidden="true"></div>
+        <div class="kpi-item">
+          <span class="kpi-value coral" data-target="5">0</span>
+          <span class="kpi-label">Overdue</span>
+        </div>
+        <div class="kpi-divider" aria-hidden="true"></div>
+        <div class="kpi-item">
+          <span class="kpi-value">94<span class="kpi-unit">%</span></span>
+          <span class="kpi-label">Avg. Confidence</span>
+        </div>
+      </section>
+
+      <!-- Transit Pipeline -->
+      <section class="pipeline-section" aria-label="Document pipeline — documents in flight">
+        <div class="section-header">
+          <h2 class="section-title">Pipeline — Documents in Flight</h2>
+          <span class="pipeline-count">24 active</span>
+        </div>
+
+        <!-- Hero Transit Line -->
+        <div class="transit-line-hero" id="transitLineHero" role="img" aria-label="Document processing pipeline: Uploaded, OCR, Classified, Extracted, Indexed, Searchable">
+          <div class="transit-track" aria-hidden="true">
+            <div class="transit-station completed" data-station="0">
+              <div class="station-dot-wrap">
+                <div class="station-dot"></div>
+              </div>
+              <div class="station-connector"></div>
+              <div class="station-label-wrap">
+                <span class="station-label">Uploaded</span>
+                <span class="station-meta mono">8 docs</span>
+              </div>
+            </div>
+            <div class="transit-station completed" data-station="1">
+              <div class="station-dot-wrap">
+                <div class="station-dot"></div>
+              </div>
+              <div class="station-connector"></div>
+              <div class="station-label-wrap">
+                <span class="station-label">OCR</span>
+                <span class="station-meta mono">6 docs</span>
+              </div>
+            </div>
+            <div class="transit-station active" data-station="2">
+              <div class="station-dot-wrap">
+                <div class="station-dot"></div>
+                <div class="station-pulse"></div>
+              </div>
+              <div class="station-connector"></div>
+              <div class="station-label-wrap">
+                <span class="station-label">Classified</span>
+                <span class="station-meta mono">4 docs</span>
+              </div>
+            </div>
+            <div class="transit-station idle" data-station="3">
+              <div class="station-dot-wrap">
+                <div class="station-dot"></div>
+              </div>
+              <div class="station-connector"></div>
+              <div class="station-label-wrap">
+                <span class="station-label">Extracted</span>
+                <span class="station-meta mono">3 docs</span>
+              </div>
+            </div>
+            <div class="transit-station idle" data-station="4">
+              <div class="station-dot-wrap">
+                <div class="station-dot"></div>
+              </div>
+              <div class="station-connector"></div>
+              <div class="station-label-wrap">
+                <span class="station-label">Indexed</span>
+                <span class="station-meta mono">2 docs</span>
+              </div>
+            </div>
+            <div class="transit-station idle last" data-station="5">
+              <div class="station-dot-wrap">
+                <div class="station-dot"></div>
+              </div>
+              <div class="station-label-wrap">
+                <span class="station-label">Searchable</span>
+                <span class="station-meta mono">1 doc</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Documents in Pipeline -->
+        <div class="pipeline-docs" role="list" aria-label="Documents currently in pipeline">
+          <div class="pipeline-doc-item" role="listitem">
+            <div class="pipeline-doc-info">
+              <span class="doc-type-tag contract">Contract</span>
+              <span class="doc-name">KMRL-CON-2026-0441 — Civil Works Package C7</span>
+              <span class="mono doc-id">DOC-20260821-0441</span>
+            </div>
+            <div class="pipeline-chip" data-stage="2" aria-label="Currently at: Classified">
+              <div class="chip-track">
+                <span class="chip-dot done" aria-hidden="true"></span>
+                <span class="chip-line done" aria-hidden="true"></span>
+                <span class="chip-dot done" aria-hidden="true"></span>
+                <span class="chip-line done" aria-hidden="true"></span>
+                <span class="chip-dot current" aria-hidden="true"></span>
+                <span class="chip-line" aria-hidden="true"></span>
+                <span class="chip-dot" aria-hidden="true"></span>
+                <span class="chip-line" aria-hidden="true"></span>
+                <span class="chip-dot" aria-hidden="true"></span>
+                <span class="chip-line" aria-hidden="true"></span>
+                <span class="chip-dot" aria-hidden="true"></span>
+              </div>
+              <span class="chip-stage-label">Classified</span>
+            </div>
+          </div>
+          <div class="pipeline-doc-item" role="listitem">
+            <div class="pipeline-doc-info">
+              <span class="doc-type-tag tender">Tender</span>
+              <span class="doc-name">NIT-2026-118 — Electrical Systems Maintenance</span>
+              <span class="mono doc-id">DOC-20260820-0118</span>
+            </div>
+            <div class="pipeline-chip" data-stage="1" aria-label="Currently at: OCR">
+              <div class="chip-track">
+                <span class="chip-dot done" aria-hidden="true"></span>
+                <span class="chip-line done" aria-hidden="true"></span>
+                <span class="chip-dot current" aria-hidden="true"></span>
+                <span class="chip-line" aria-hidden="true"></span>
+                <span class="chip-dot" aria-hidden="true"></span>
+                <span class="chip-line" aria-hidden="true"></span>
+                <span class="chip-dot" aria-hidden="true"></span>
+                <span class="chip-line" aria-hidden="true"></span>
+                <span class="chip-dot" aria-hidden="true"></span>
+                <span class="chip-line" aria-hidden="true"></span>
+                <span class="chip-dot" aria-hidden="true"></span>
+              </div>
+              <span class="chip-stage-label">OCR</span>
+            </div>
+          </div>
+          <div class="pipeline-doc-item" role="listitem">
+            <div class="pipeline-doc-info">
+              <span class="doc-type-tag invoice">Invoice</span>
+              <span class="doc-name">INV-2026-7832 — Siemens Signalling Systems Q2</span>
+              <span class="mono doc-id">DOC-20260819-7832</span>
+            </div>
+            <div class="pipeline-chip" data-stage="3" aria-label="Currently at: Extracted">
+              <div class="chip-track">
+                <span class="chip-dot done" aria-hidden="true"></span>
+                <span class="chip-line done" aria-hidden="true"></span>
+                <span class="chip-dot done" aria-hidden="true"></span>
+                <span class="chip-line done" aria-hidden="true"></span>
+                <span class="chip-dot done" aria-hidden="true"></span>
+                <span class="chip-line done" aria-hidden="true"></span>
+                <span class="chip-dot current" aria-hidden="true"></span>
+                <span class="chip-line" aria-hidden="true"></span>
+                <span class="chip-dot" aria-hidden="true"></span>
+                <span class="chip-line" aria-hidden="true"></span>
+                <span class="chip-dot" aria-hidden="true"></span>
+              </div>
+              <span class="chip-stage-label">Extracted</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="hairline" aria-hidden="true"></div>
+
+      <!-- Three Column Section -->
+      <div class="three-col-grid">
+
+        <!-- Needs Review -->
+        <section class="col-section" aria-label="Documents needing review">
+          <div class="col-section-header">
+            <h2 class="col-title">Needs Review</h2>
+            <span class="amber-badge">17</span>
+          </div>
+          <ul class="review-list" role="list">
+            <li class="review-item" role="listitem">
+              <div class="review-item-top">
+                <span class="doc-type-tag contract">Contract</span>
+                <span class="review-reason amber">Low confidence</span>
+              </div>
+              <a href="document.html" class="review-doc-name">KMRL-CON-2025-0387 — Track Renewal Ph. 2</a>
+              <div class="review-meta">
+                <span class="mono">Conf: 71%</span>
+                <span class="review-field">Parties field uncertain</span>
+              </div>
+            </li>
+            <li class="review-item" role="listitem">
+              <div class="review-item-top">
+                <span class="doc-type-tag tender">Tender</span>
+                <span class="review-reason amber">Conflicting dates</span>
+              </div>
+              <a href="document.html" class="review-doc-name">NIT-2026-094 — Depot Expansion Works</a>
+              <div class="review-meta">
+                <span class="mono">Conf: 83%</span>
+                <span class="review-field">Submission deadline conflict</span>
+              </div>
+            </li>
+            <li class="review-item" role="listitem">
+              <div class="review-item-top">
+                <span class="doc-type-tag invoice">Invoice</span>
+                <span class="review-reason coral">Amount mismatch</span>
+              </div>
+              <a href="document.html" class="review-doc-name">INV-2026-7291 — BEML Coaches Supply</a>
+              <div class="review-meta">
+                <span class="mono">Conf: 88%</span>
+                <span class="review-field">PO amount differs ₹4.2L</span>
+              </div>
+            </li>
+            <li class="review-item" role="listitem">
+              <div class="review-item-top">
+                <span class="doc-type-tag report">Report</span>
+                <span class="review-reason amber">Incomplete extraction</span>
+              </div>
+              <a href="document.html" class="review-doc-name">KMRL-RPT-2026-Q1 — Safety Audit</a>
+              <div class="review-meta">
+                <span class="mono">Conf: 79%</span>
+                <span class="review-field">3 tables unextracted</span>
+              </div>
+            </li>
+            <li class="review-item" role="listitem">
+              <div class="review-item-top">
+                <span class="doc-type-tag contract">Contract</span>
+                <span class="review-reason amber">Missing clause</span>
+              </div>
+              <a href="document.html" class="review-doc-name">KMRL-CON-2026-0412 — IT Infrastructure</a>
+              <div class="review-meta">
+                <span class="mono">Conf: 76%</span>
+                <span class="review-field">Clause 14.3 not found</span>
+              </div>
+            </li>
+          </ul>
+          <a href="library.html?filter=review" class="col-footer-link">View all 17 →</a>
+        </section>
+
+        <!-- Upcoming Deadlines -->
+        <section class="col-section" aria-label="Upcoming document deadlines">
+          <div class="col-section-header">
+            <h2 class="col-title">Upcoming Deadlines</h2>
+            <span class="coral-badge">5 overdue</span>
+          </div>
+          <ul class="deadline-list" role="list">
+            <li class="deadline-item overdue" role="listitem">
+              <div class="deadline-date-block coral">
+                <span class="deadline-day">14</span>
+                <span class="deadline-month">AUG</span>
+              </div>
+              <div class="deadline-info">
+                <span class="deadline-type">Tender Submission</span>
+                <a href="document.html" class="deadline-doc-name">NIT-2026-089 — Rolling Stock Maintenance</a>
+                <span class="deadline-tag coral-text">7 days overdue</span>
+              </div>
+            </li>
+            <li class="deadline-item upcoming" role="listitem">
+              <div class="deadline-date-block amber">
+                <span class="deadline-day">24</span>
+                <span class="deadline-month">AUG</span>
+              </div>
+              <div class="deadline-info">
+                <span class="deadline-type">Contract Renewal</span>
+                <a href="document.html" class="deadline-doc-name">KMRL-CON-2024-0271 — Security Services</a>
+                <span class="deadline-tag amber-text">3 days left</span>
+              </div>
+            </li>
+            <li class="deadline-item upcoming" role="listitem">
+              <div class="deadline-date-block amber">
+                <span class="deadline-day">28</span>
+                <span class="deadline-month">AUG</span>
+              </div>
+              <div class="deadline-info">
+                <span class="deadline-type">Payment Due</span>
+                <a href="document.html" class="deadline-doc-name">INV-2026-7654 — Alstom Propulsion Q2</a>
+                <span class="deadline-tag amber-text">7 days left</span>
+              </div>
+            </li>
+            <li class="deadline-item normal" role="listitem">
+              <div class="deadline-date-block">
+                <span class="deadline-day">05</span>
+                <span class="deadline-month">SEP</span>
+              </div>
+              <div class="deadline-info">
+                <span class="deadline-type">Bid Opening</span>
+                <a href="document.html" class="deadline-doc-name">NIT-2026-122 — Fare Collection Systems</a>
+                <span class="deadline-tag">15 days left</span>
+              </div>
+            </li>
+            <li class="deadline-item normal" role="listitem">
+              <div class="deadline-date-block">
+                <span class="deadline-day">15</span>
+                <span class="deadline-month">SEP</span>
+              </div>
+              <div class="deadline-info">
+                <span class="deadline-type">Audit Report</span>
+                <a href="document.html" class="deadline-doc-name">KMRL-RPT-2026-Q2 — Financial Audit</a>
+                <span class="deadline-tag">25 days left</span>
+              </div>
+            </li>
+          </ul>
+          <a href="library.html?filter=deadlines" class="col-footer-link">View all deadlines →</a>
+        </section>
+
+        <!-- Recent AI Answers -->
+        <section class="col-section" aria-label="Recent AI assistant answers">
+          <div class="col-section-header">
+            <h2 class="col-title">Recent Answers</h2>
+            <a href="chat.html" class="col-header-link">Ask AI →</a>
+          </div>
+          <ul class="answers-list" role="list">
+            <li class="answer-item" role="listitem">
+              <div class="answer-q">What is the total value of active civil works contracts?</div>
+              <div class="answer-a">₹ 847.3 Crore across 12 active contracts <span class="citation-chip">Contract 0441, §3.2</span></div>
+              <span class="answer-time mono">Today, 09:14</span>
+            </li>
+            <li class="answer-item" role="listitem">
+              <div class="answer-q">Which tender has the earliest submission deadline?</div>
+              <div class="answer-a">NIT-2026-089 — Rolling Stock Maintenance, due 14 Aug 2026 <span class="citation-chip">NIT-089, p.1</span></div>
+              <span class="answer-time mono">Today, 08:47</span>
+            </li>
+            <li class="answer-item" role="listitem">
+              <div class="answer-q">Show performance guarantee terms for Contract 0387.</div>
+              <div class="answer-a">10% of contract value, valid for 5 years from completion date <span class="citation-chip">CON-0387, §12.4</span></div>
+              <span class="answer-time mono">Yesterday, 17:22</span>
+            </li>
+          </ul>
+          <a href="chat.html" class="col-footer-link">Open AI Assistant →</a>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Upload Modal -->
+  <div class="modal-overlay" id="uploadModal" role="dialog" aria-modal="true" aria-labelledby="uploadModalTitle" hidden>
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="uploadModalTitle">Upload Document</h2>
+        <button class="modal-close" id="modalClose" aria-label="Close upload dialog">
+          <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="upload-dropzone" id="dropzone" role="button" tabindex="0" aria-label="Drop files here or click to browse">
+        <svg viewBox="0 0 48 48" fill="none" width="48" height="48" aria-hidden="true"><path d="M24 8v24M14 18l10-10 10 10" stroke="#0E5C63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 36h32" stroke="#0E5C63" stroke-width="2" stroke-linecap="round"/></svg>
+        <p class="dropzone-text">Drop PDF, DOCX, or XLSX files here</p>
+        <p class="dropzone-sub">or <button class="dropzone-browse" id="browseBtn">browse files</button></p>
+        <p class="dropzone-hint">Max 50 MB per file — supports multi-page documents</p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-secondary" id="cancelUpload">Cancel</button>
+        <button class="btn-primary" id="startUpload">Begin Processing</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
