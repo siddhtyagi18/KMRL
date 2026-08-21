@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Assistant — KMRL Document Intelligence</title>
+  <meta name="description" content="Ask questions about KMRL's contracts, tenders, invoices, and reports. AI-powered answers with inline citations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+    <div class="sidebar-brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="13" stroke="#B8873D" stroke-width="1.5"/>
+          <path d="M7 14h14M14 7v14" stroke="#B8873D" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="14" cy="14" r="3" fill="#B8873D"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">KMRL</span>
+        <span class="brand-sub">Document Intelligence</span>
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <span class="sidebar-label">Workspace</span>
+      <ul class="nav-list" role="list">
+        <li><a href="index.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>Dashboard</a></li>
+        <li><a href="library.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M3 4h14M3 8h14M3 12h9M3 16h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Document Library</a></li>
+        <li><a href="chat.html" class="nav-item active" aria-current="page"><svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M17 10c0 3.866-3.134 7-7 7a7.003 7.003 0 01-6.072-3.5L3 17l3.5-.928A7 7 0 1117 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>AI Assistant<span class="nav-badge">RAG</span></a></li>
+      </ul>
+    </div>
+
+    <!-- Conversation History -->
+    <div class="sidebar-section" style="flex:1">
+      <span class="sidebar-label">Conversations</span>
+      <ul class="nav-list" role="list">
+        <li><a href="#" class="nav-item active" style="font-size:.78rem">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" width="14" height="14"><path d="M17 10c0 3.866-3.134 7-7 7a7.003 7.003 0 01-6.072-3.5L3 17l3.5-.928A7 7 0 1117 10z" stroke="currentColor" stroke-width="1.5"/></svg>
+          Contract values Q3 2026
+        </a></li>
+        <li><a href="#" class="nav-item" style="font-size:.78rem">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" width="14" height="14"><path d="M17 10c0 3.866-3.134 7-7 7a7.003 7.003 0 01-6.072-3.5L3 17l3.5-.928A7 7 0 1117 10z" stroke="currentColor" stroke-width="1.5"/></svg>
+          Tender deadlines Aug
+        </a></li>
+        <li><a href="#" class="nav-item" style="font-size:.78rem">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" width="14" height="14"><path d="M17 10c0 3.866-3.134 7-7 7a7.003 7.003 0 01-6.072-3.5L3 17l3.5-.928A7 7 0 1117 10z" stroke="currentColor" stroke-width="1.5"/></svg>
+          Siemens invoice analysis
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-bottom">
+      <button class="upload-btn" id="uploadBtn" aria-label="Upload new document">
+        <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M10 3v10M6 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Upload Document
+      </button>
+      <div class="sidebar-user">
+        <div class="user-avatar" aria-hidden="true">SR</div>
+        <div class="user-info">
+          <span class="user-name">Suresh Rajan</span>
+          <span class="user-role">Admin</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content" id="main-content">
+    <header class="topbar" role="banner">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar">
+          <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="page-title-area">
+          <h1 class="page-title">AI Assistant</h1>
+          <span class="page-date" style="background:rgba(14,92,99,.1);color:var(--backwater);padding:2px 7px;border-radius:10px;font-size:.65rem;font-weight:600;letter-spacing:.05em">RAG — 661 docs indexed</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <button class="btn-secondary" style="padding:6px 12px;font-size:.78rem" id="newChatBtn" aria-label="Start new conversation">
+          + New Conversation
+        </button>
+        <button class="icon-btn" aria-label="Conversation settings">
+          <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="chat-layout">
+      <!-- Chat main -->
+      <div class="chat-main">
+        <div class="chat-messages" id="chatMessages" role="log" aria-label="Conversation" aria-live="polite">
+          <!-- Initial empty state -->
+          <div class="chat-empty" id="chatEmpty">
+            <div class="chat-empty-icon" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none" width="24" height="24">
+                <path d="M24 14c0 5.523-4.477 10-10 10a9.985 9.985 0 01-8.66-5L4 23l2.34-1.24A10 10 0 1024 14z" stroke="#0E5C63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h2 class="chat-empty-title">Ask anything about KMRL documents</h2>
+            <p class="chat-empty-sub">Search across 661 documents — contracts, tenders, invoices, and reports. Answers come with inline citations you can click to view the source.</p>
+            <div class="suggested-chips" role="list" aria-label="Suggested questions">
+              <button class="suggested-chip" onclick="usePrompt(this.textContent)" role="listitem">What is the total value of civil works contracts?</button>
+              <button class="suggested-chip" onclick="usePrompt(this.textContent)" role="listitem">List tenders closing in the next 30 days</button>
+              <button class="suggested-chip" onclick="usePrompt(this.textContent)" role="listitem">Show performance guarantee terms for Contract 0441</button>
+              <button class="suggested-chip" onclick="usePrompt(this.textContent)" role="listitem">Which invoices are pending payment?</button>
+              <button class="suggested-chip" onclick="usePrompt(this.textContent)" role="listitem">Summarise the Q1 2026 Safety Audit findings</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input area -->
+        <div class="chat-input-area">
+          <div class="chat-input-row">
+            <textarea
+              class="chat-textarea"
+              id="chatInput"
+              rows="1"
+              placeholder="Ask a question about any KMRL document…"
+              aria-label="Ask a question"
+              aria-multiline="true"
+            ></textarea>
+            <button class="chat-send-btn" id="chatSend" aria-label="Send message">
+              <svg viewBox="0 0 20 20" fill="none" width="16" height="16">
+                <path d="M17 10L3 3l3 7-3 7 14-7z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <p class="chat-hint">Answers are AI-generated from indexed documents. Always verify critical information against the original source.</p>
+        </div>
+      </div>
+
+      <!-- Source documents pane -->
+      <aside class="chat-source-pane" aria-label="Source documents">
+        <div class="source-pane-header">
+          <span class="source-pane-title">Sources</span>
+          <span class="mono" style="font-size:.65rem;color:var(--text-muted)" id="sourceCount">—</span>
+        </div>
+        <div class="source-pane-body" id="sourcePaneBody">
+          <div style="padding:24px 0;text-align:center">
+            <p style="font-size:.78rem;color:var(--text-muted);line-height:1.6">Source documents will appear here after you ask a question</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
