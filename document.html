@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contract Detail — KMRL Document Intelligence</title>
+  <meta name="description" content="View extracted metadata, AI summary, and source document for KMRL contract KMRL-CON-2026-0441." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+    <div class="sidebar-brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="13" stroke="#B8873D" stroke-width="1.5"/>
+          <path d="M7 14h14M14 7v14" stroke="#B8873D" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="14" cy="14" r="3" fill="#B8873D"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">KMRL</span>
+        <span class="brand-sub">Document Intelligence</span>
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <span class="sidebar-label">Workspace</span>
+      <ul class="nav-list" role="list">
+        <li><a href="index.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>Dashboard</a></li>
+        <li><a href="library.html" class="nav-item active" aria-current="page"><svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M3 4h14M3 8h14M3 12h9M3 16h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Document Library</a></li>
+        <li><a href="chat.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M17 10c0 3.866-3.134 7-7 7a7.003 7.003 0 01-6.072-3.5L3 17l3.5-.928A7 7 0 1117 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>AI Assistant<span class="nav-badge">RAG</span></a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <span class="sidebar-label">Documents</span>
+      <ul class="nav-list" role="list">
+        <li><a href="#" class="nav-item"><svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M4 4v12a2 2 0 002 2h8a2 2 0 002-2V7l-4-3H6a2 2 0 00-2 0z" stroke="currentColor" stroke-width="1.5"/><path d="M12 4v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Contracts<span class="nav-count">142</span></a></li>
+        <li><a href="#" class="nav-item"><svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M4 4v12a2 2 0 002 2h8a2 2 0 002-2V7l-4-3H6a2 2 0 00-2 0z" stroke="currentColor" stroke-width="1.5"/><path d="M12 4v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Tenders<span class="nav-count">89</span></a></li>
+        <li><a href="#" class="nav-item"><svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M4 4v12a2 2 0 002 2h8a2 2 0 002-2V7l-4-3H6a2 2 0 00-2 0z" stroke="currentColor" stroke-width="1.5"/><path d="M12 4v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Invoices<span class="nav-count">374</span></a></li>
+        <li><a href="#" class="nav-item"><svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M4 4v12a2 2 0 002 2h8a2 2 0 002-2V7l-4-3H6a2 2 0 00-2 0z" stroke="currentColor" stroke-width="1.5"/><path d="M12 4v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Reports<span class="nav-count">56</span></a></li>
+      </ul>
+    </div>
+    <div class="sidebar-bottom">
+      <button class="upload-btn" id="uploadBtn" aria-label="Upload new document">
+        <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M10 3v10M6 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Upload Document
+      </button>
+      <div class="sidebar-user">
+        <div class="user-avatar" aria-hidden="true">SR</div>
+        <div class="user-info">
+          <span class="user-name">Suresh Rajan</span>
+          <span class="user-role">Admin</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content" id="main-content">
+    <!-- Topbar with breadcrumb -->
+    <header class="topbar" role="banner">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar">
+          <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <nav aria-label="Breadcrumb">
+          <ol style="list-style:none;display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--text-muted)">
+            <li><a href="library.html" style="color:var(--text-muted);text-decoration:none;transition:color .15s" onmouseenter="this.style.color='var(--backwater)'" onmouseleave="this.style.color='var(--text-muted)'">Library</a></li>
+            <li aria-hidden="true" style="color:var(--idle)">/</li>
+            <li style="color:var(--ink);font-weight:500" aria-current="page">KMRL-CON-2026-0441</li>
+          </ol>
+        </nav>
+      </div>
+      <div class="topbar-right">
+        <button class="btn-secondary" style="padding:6px 12px;font-size:.78rem" aria-label="Ask AI about this document">
+          <svg viewBox="0 0 16 16" fill="none" width="13" height="13" style="display:inline-block;vertical-align:middle;margin-right:4px"><path d="M14 8c0 3.314-2.686 6-6 6a5.998 5.998 0 01-5.205-3L2 13l2.795-.743A6 6 0 1114 8z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Ask AI
+        </button>
+        <button class="icon-btn" aria-label="Download document">
+          <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M10 3v10M6 13l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 17h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="More options">
+          <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><circle cx="10" cy="4" r="1.2" fill="currentColor"/><circle cx="10" cy="10" r="1.2" fill="currentColor"/><circle cx="10" cy="16" r="1.2" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Split view -->
+    <div class="detail-layout">
+
+      <!-- Document preview (left) -->
+      <div class="doc-preview-pane" role="region" aria-label="Document preview">
+        <div class="doc-preview-toolbar">
+          <button class="preview-nav-btn" aria-label="Previous page">← Prev</button>
+          <span class="preview-page-info" aria-live="polite">Page <strong id="currentPage" style="color:rgba(255,255,255,.85)">1</strong> of 14</span>
+          <button class="preview-nav-btn" aria-label="Next page">Next →</button>
+          <span style="flex:1"></span>
+          <button class="preview-nav-btn" aria-label="Zoom in">+</button>
+          <button class="preview-nav-btn" aria-label="Zoom out">−</button>
+          <button class="preview-nav-btn" aria-label="Fit to width">Fit</button>
+        </div>
+        <div class="preview-doc-canvas">
+          <article class="doc-page-sim" aria-label="Document page content">
+            <!-- Simulated document page -->
+            <div class="doc-page-header">
+              <div class="doc-page-title">CONTRACT FOR CIVIL WORKS PACKAGE C7</div>
+              <div class="doc-page-title" style="font-size:.85rem;font-weight:400;margin-top:4px">Elevated Viaduct — Edapally to Kakkanad Section</div>
+              <div class="doc-page-meta" style="margin-top:8px">Ref: KMRL-CON-2026-0441 &nbsp;|&nbsp; Date: 21 August 2026 &nbsp;|&nbsp; Page 1 of 14</div>
+            </div>
+
+            <div class="doc-page-section">
+              <div class="doc-page-section-title">1. Parties to the Contract</div>
+              <div class="doc-page-text">
+                This Agreement is entered into on the <span class="doc-highlight" data-field="date" title="AI extracted: Contract Date">21st day of August, 2026</span>, between <span class="doc-highlight" data-field="party1" title="AI extracted: Party 1">Kochi Metro Rail Limited (KMRL)</span>, a company incorporated under the Companies Act 2013, having its registered office at Metro Bhawan, Ernakulam, Kerala — 682 011 (hereinafter referred to as the "Employer") and <span class="doc-highlight" data-field="party2" title="AI extracted: Party 2">Kerala Construction Corporation Limited (KCC Ltd)</span>, having its office at Civil Station Road, Thrissur, Kerala — 680 001 (hereinafter referred to as the "Contractor").
+              </div>
+            </div>
+
+            <div class="doc-page-section">
+              <div class="doc-page-section-title">2. Scope of Work</div>
+              <div class="doc-page-text">
+                The Contractor agrees to execute and complete the Civil Works for Package C7 comprising construction of <span class="doc-highlight" data-field="scope" title="AI extracted: Scope">elevated viaduct structures spanning 4.7 km</span> between Edapally Junction and Kakkanad IT Hub stations, including all associated pier foundations, pre-stressed concrete box girders, bearings, and expansion joints, strictly as per the drawings, specifications, and schedules forming part of this Contract.
+              </div>
+            </div>
+
+            <div class="doc-page-section">
+              <div class="doc-page-section-title">3. Contract Value & Payment</div>
+              <div class="doc-page-text">
+                3.1 The Accepted Contract Amount is <span class="doc-highlight" data-field="value" title="AI extracted: Contract Value">INR 342,00,00,000 (Rupees Three Hundred Forty-Two Crore)</span>, subject to additions and deductions in accordance with the Contract.<br/><br/>
+                3.2 Payment shall be made within 30 days of receipt of certified interim payment certificates, as per the schedule of payments at Appendix B.
+              </div>
+            </div>
+
+            <div class="doc-page-section">
+              <div class="doc-page-section-title">4. Time for Completion</div>
+              <div class="doc-page-text">
+                The Works shall be completed within <span class="doc-highlight" data-field="duration" title="AI extracted: Duration">36 months</span> from the date of the Letter of Acceptance, i.e., by <span class="doc-highlight" data-field="completion" title="AI extracted: Completion Date">21 August 2029</span>. Time is of the essence.
+              </div>
+            </div>
+
+            <div class="doc-page-section">
+              <div class="doc-page-section-title">5. Performance Security</div>
+              <div class="doc-page-text">
+                Within 28 days of the Letter of Acceptance, the Contractor shall furnish Performance Security of <span class="doc-highlight" data-field="security" title="AI extracted: Performance Security">10% of the Accepted Contract Amount</span> (INR 34.2 Crore) in the form of a bank guarantee from a nationalised bank, valid until 60 days after the Defects Notification Period.
+              </div>
+            </div>
+
+            <!-- Stamp watermark -->
+            <div class="doc-stamp" aria-hidden="true">
+              <div class="doc-stamp-text">KMRL<br/>OFFICIAL<br/>RECORD</div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Metadata Pane (right) -->
+      <aside class="doc-meta-pane" aria-label="Document metadata and AI analysis">
+
+        <!-- Document title -->
+        <div class="meta-pane-section">
+          <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px">
+            <div style="flex:1">
+              <span class="doc-type-tag contract" style="margin-bottom:6px;display:inline-block">Contract</span>
+              <div style="font-family:var(--font-display);font-size:.95rem;font-weight:600;color:var(--ink);line-height:1.3">Civil Works Package C7 — Elevated Viaduct</div>
+            </div>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:.68rem;color:var(--text-muted)">KMRL-CON-2026-0441 &nbsp;·&nbsp; DOC-20260821-0441</div>
+        </div>
+
+        <!-- Transit line status -->
+        <div class="detail-transit">
+          <div class="meta-section-title">Processing Status</div>
+          <div class="transit-track" style="min-width:auto;padding:10px 0 0" role="img" aria-label="Document processing: completed Upload, OCR, Classified; currently at Extracted; pending Indexed and Searchable">
+            <div class="transit-station completed" style="flex:1">
+              <div class="station-dot-wrap"><div class="station-dot"></div></div>
+              <div class="station-connector"></div>
+              <div class="station-label-wrap" style="width:50px;transform:translateX(-16px)"><span class="station-label" style="font-size:.6rem">Upload</span></div>
+            </div>
+            <div class="transit-station completed" style="flex:1">
+              <div class="station-dot-wrap"><div class="station-dot"></div></div>
+              <div class="station-connector"></div>
+              <div class="station-label-wrap" style="width:50px;transform:translateX(-12px)"><span class="station-label" style="font-size:.6rem">OCR</span></div>
+            </div>
+            <div class="transit-station completed" style="flex:1">
+              <div class="station-dot-wrap"><div class="station-dot"></div></div>
+              <div class="station-connector"></div>
+              <div class="station-label-wrap" style="width:60px;transform:translateX(-16px)"><span class="station-label" style="font-size:.6rem">Classified</span></div>
+            </div>
+            <div class="transit-station active" style="flex:1">
+              <div class="station-dot-wrap"><div class="station-dot"></div><div class="station-pulse"></div></div>
+              <div class="station-connector"></div>
+              <div class="station-label-wrap" style="width:60px;transform:translateX(-16px)"><span class="station-label" style="font-size:.6rem">Extracted</span></div>
+            </div>
+            <div class="transit-station idle" style="flex:1">
+              <div class="station-dot-wrap"><div class="station-dot"></div></div>
+              <div class="station-connector"></div>
+              <div class="station-label-wrap" style="width:50px;transform:translateX(-12px)"><span class="station-label" style="font-size:.6rem">Indexed</span></div>
+            </div>
+            <div class="transit-station idle last" style="flex:0">
+              <div class="station-dot-wrap"><div class="station-dot"></div></div>
+              <div class="station-label-wrap" style="width:60px;transform:translateX(-16px)"><span class="station-label" style="font-size:.6rem">Searchable</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Summary -->
+        <div class="meta-pane-section">
+          <div class="meta-section-title">AI Summary</div>
+          <div class="ai-summary-box">
+            <div class="ai-summary-label">
+              <div class="ai-dot"></div>
+              AI Generated
+            </div>
+            <p class="ai-summary-text" id="aiSummaryText">
+              Construction contract for a 4.7 km elevated viaduct between Edapally and Kakkanad. Contractor: KCC Ltd. Value: ₹342 Crore. Duration: 36 months (completion Aug 2029). Performance security of ₹34.2 Cr required within 28 days. Payment within 30 days of certified IPCs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Extracted Fields -->
+        <div class="meta-pane-section">
+          <div class="meta-section-title">Extracted Fields</div>
+
+          <div class="meta-field">
+            <span class="meta-label">Contract Value</span>
+            <div class="meta-value-row">
+              <span class="meta-value">₹342,00,00,000</span>
+              <div class="confidence-seal" title="AI extraction confidence: 97%" aria-label="Confidence: 97%">
+                <span class="seal-value">97%</span>
+                <span class="seal-label">Conf.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meta-field">
+            <span class="meta-label">Employer</span>
+            <div class="meta-value-row">
+              <span class="meta-value">Kochi Metro Rail Limited</span>
+              <div class="confidence-seal" title="AI extraction confidence: 99%" aria-label="Confidence: 99%">
+                <span class="seal-value">99%</span>
+                <span class="seal-label">Conf.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meta-field">
+            <span class="meta-label">Contractor</span>
+            <div class="meta-value-row">
+              <span class="meta-value">KCC Ltd (Kerala)</span>
+              <div class="confidence-seal" title="AI extraction confidence: 98%" aria-label="Confidence: 98%">
+                <span class="seal-value">98%</span>
+                <span class="seal-label">Conf.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meta-field">
+            <span class="meta-label">Contract Date</span>
+            <div class="meta-value-row">
+              <span class="meta-value mono">21 Aug 2026</span>
+              <div class="confidence-seal" title="AI extraction confidence: 99%" aria-label="Confidence: 99%">
+                <span class="seal-value">99%</span>
+                <span class="seal-label">Conf.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meta-field">
+            <span class="meta-label">Completion Date</span>
+            <div class="meta-value-row">
+              <span class="meta-value mono">21 Aug 2029</span>
+              <div class="confidence-seal" title="AI extraction confidence: 97%" aria-label="Confidence: 97%">
+                <span class="seal-value">97%</span>
+                <span class="seal-label">Conf.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meta-field">
+            <span class="meta-label">Scope</span>
+            <div class="meta-value-row">
+              <span class="meta-value" style="font-size:.8rem">Elevated viaduct, 4.7 km, Edapally–Kakkanad</span>
+              <div class="confidence-seal" title="AI extraction confidence: 95%" aria-label="Confidence: 95%">
+                <span class="seal-value">95%</span>
+                <span class="seal-label">Conf.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meta-field">
+            <span class="meta-label">Performance Security</span>
+            <div class="meta-value-row">
+              <span class="meta-value">10% — ₹34.2 Crore</span>
+              <div class="confidence-seal" title="AI extraction confidence: 96%" aria-label="Confidence: 96%">
+                <span class="seal-value">96%</span>
+                <span class="seal-label">Conf.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="meta-pane-section" style="margin-top:auto">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <a href="chat.html?doc=KMRL-CON-2026-0441" class="btn-primary" style="text-align:center;text-decoration:none;display:block;padding:9px">
+              Ask AI About This Document
+            </a>
+            <button class="btn-secondary" style="width:100%">Flag for Review</button>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    // Stamp-down animation on reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.animation = 'stampDown 150ms ease-out forwards';
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.confidence-seal').forEach(s => observer.observe(s));
+
+    // Highlight hover
+    document.querySelectorAll('.doc-highlight').forEach(h => {
+      h.style.cursor = 'pointer';
+      h.addEventListener('click', () => {
+        const field = h.dataset.field;
+        // In a real app, this would scroll the metadata pane to that field
+        const label = h.getAttribute('title')?.replace('AI extracted: ', '');
+        if (label) {
+          // Flash the corresponding meta field
+          document.querySelectorAll('.meta-label').forEach(ml => {
+            if (ml.textContent.toLowerCase().includes(field?.toLowerCase() || '')) {
+              ml.closest('.meta-field').style.background = 'rgba(184,135,61,.12)';
+              setTimeout(() => { ml.closest('.meta-field').style.background = ''; }, 1000);
+            }
+          });
+        }
+      });
+    });
+
+    // Page nav
+    let page = 1;
+    document.querySelector('[aria-label="Previous page"]')?.addEventListener('click', () => {
+      if (page > 1) { page--; document.getElementById('currentPage').textContent = page; }
+    });
+    document.querySelector('[aria-label="Next page"]')?.addEventListener('click', () => {
+      if (page < 14) { page++; document.getElementById('currentPage').textContent = page; }
+    });
+
+    // AI summary typewriter on load
+    const summaryEl = document.getElementById('aiSummaryText');
+    if (summaryEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const text = summaryEl.textContent.trim();
+      summaryEl.textContent = '';
+      let i = 0;
+      const reveal = setInterval(() => {
+        summaryEl.textContent += text[i];
+        i++;
+        if (i >= text.length) clearInterval(reveal);
+      }, 14);
+    }
+  </script>
+</body>
+</html>
